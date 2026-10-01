@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turnos - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard">🏠 Dashboard</a>
+                <a href="/alumnos">👥 Alumnos</a>
+                <a href="/platillos">🍲 Platillos</a>
+                <a href="/turnos" class="active">📅 Turnos</a>
+                <a href="/reportes">📄 Reportes</a>
+                <a href="/configuracion">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <main class="content">
+            <div class="top-stats-row-4">
+                <div class="card-metric">16 turnos este mes</div>
+                <div class="card-metric">50 voluntarios activos</div>
+                <div class="card-metric">92% cobertura de turnos</div>
+                <div class="card-metric">50 platillos por turno</div>
+            </div>
+
+            <div class="turnos-layout">
+                <div class="left-turnos">
+                    <div class="turnos-nav-tabs">
+                        <span class="active-tab">Próximos turnos</span>
+                        <span>Calendarios</span>
+                        <span>Historial de platillos</span>
+                    </div>
+                    <input type="text" placeholder="buscador de turnos......" class="search-input">
+                    
+                    <div class="turno-item">
+                        <div class="date-box">Lun 13 ago</div>
+                        <div class="turno-info">
+                            <h4>Preparación</h4>
+                            <p>9:00am - 10:30am</p>
+                        </div>
+                        <div class="turno-count">30 / 20 <br><small>platillos por turno</small></div>
+                    </div>
+                </div>
+
+                <div class="right-detalle">
+                    <h3>Detalle del turno</h3>
+                    <h4>preparacion de alimentos <span class="badge-confirm">confirmado</span></h4>
+                    <p><b>Lunes 13 de agosto 2026</b><br>9:00 am - 10:30am<br>Comedor</p>
+                    <hr>
+                    <p><b>Descripción</b><br>Preparación de alimentos para el desayuno incluye lavado, corte y cocción.</p>
+                    <p><b>Voluntarios asignados:</b></p>
+                    <ul>
+                        <li>María Vázquez <span class="badge-confirm">confirmado</span></li>
+                        <li>José Mendiola <span class="badge-confirm">confirmado</span></li>
+                        <li>Leticia Martínez <span class="badge-confirm">confirmado</span></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

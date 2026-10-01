@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard">🏠 Dashboard</a>
+                <a href="/alumnos" class="active">👥 Alumnos</a>
+                <a href="/platillos">🍲 Platillos</a>
+                <a href="/turnos">📅 Turnos</a>
+                <a href="/reportes">📄 Reportes</a>
+                <a href="/configuracion">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <main class="content">
+            <h1>SISTEMA DE CONTROL DE COMEDOR (SCC)</h1>
+            
+            <div class="filter-bar">
+                <label>BUSCAR ALUMNO</label>
+                <select>
+                    <option>Filtrar por...</option>
+                    <option>Matrícula</option>
+                    <option>Nombre</option>
+                </select>
+            </div>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>NO. DE REGISTRO</th>
+                        <th>MATRÍCULA</th>
+                        <th>NOMBRE</th>
+                        <th>TURNO</th>
+                        <th>CANTIDAD DE PLATILLOS SOLICITADOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in alumnos %}
+                    <tr>
+                        <td>{{ a.registro }}</td>
+                        <td>{{ a.matricula }}</td>
+                        <td>{{ a.nombre }}</td>
+                        <td>{{ a.turno }}</td>
+                        <td>{{ a.platillos }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

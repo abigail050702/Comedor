@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <div class="logo-placeholder">🍽️</div>
+        <h2>SISTEMA DE CONTROL DE COMEDOR (SCC)</h2>
+        <form action="/dashboard" method="GET">
+            <div class="input-group">
+                <span>👤</span>
+                <input type="text" name="usuario" placeholder="Usuario" required>
+            </div>
+            <div class="input-group">
+                <span>🔒</span>
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn-login">INICIAR SESIÓN</button>
+        </form>
+    </div>
+</body>
+</html>

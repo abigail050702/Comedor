@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reportes - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard">🏠 Dashboard</a>
+                <a href="/alumnos">👥 Alumnos</a>
+                <a href="/platillos">🍲 Platillos</a>
+                <a href="/turnos">📅 Turnos</a>
+                <a href="/reportes" class="active">📄 Reportes</a>
+                <a href="/configuracion">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <main class="content">
+            <h1>SISTEMA DE CONTROL DE COMEDOR (SCC)</h1>
+            
+            <div class="report-header-row">
+                <h2>HISTORIAL DETALLADO DEL CONSUMO</h2>
+                <button class="btn-pdf">EXPORTAR PDF 📄</button>
+            </div>
+
+            <div class="filter-bar">
+                <label>Filtrar por:</label>
+                <select>
+                    <option>Seleccionar...</option>
+                </select>
+            </div>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>FECHA</th>
+                        <th>MATRÍCULA</th>
+                        <th>NOMBRE</th>
+                        <th>TURNO</th>
+                        <th>OPERADOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in reporte %}
+                    <tr>
+                        <td>{{ r.fecha }}</td>
+                        <td>{{ r.matricula }}</td>
+                        <td>{{ r.nombre }}</td>
+                        <td>{{ r.turno }}</td>
+                        <td>{{ r.operador }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

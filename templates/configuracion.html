@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuración - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard">🏠 Dashboard</a>
+                <a href="/alumnos">👥 Alumnos</a>
+                <a href="/platillos">🍲 Platillos</a>
+                <a href="/turnos">📅 Turnos</a>
+                <a href="/reportes">📄 Reportes</a>
+                <a href="/configuracion" class="active">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <main class="content">
+            <h1>SISTEMA DE CONTROL DE COMEDOR (SCC)</h1>
+            <h2>CONFIGURACIÓN</h2>
+
+            <div class="config-grid">
+                <div class="config-box">
+                    <h3>DATOS DEL COMEDOR</h3>
+                    <div class="form-row">
+                        <label>Ciclo escolar:</label>
+                        <input type="text" value="Agosto-Diciembre 2026">
+                    </div>
+                    <div class="form-row">
+                        <label>Tiempo de espera:</label>
+                        <input type="text" value="15 minutos">
+                    </div>
+                    <div class="form-row">
+                        <label>Órdenes Diarias:</label>
+                        <input type="text" value="500 ordenes">
+                    </div>
+                </div>
+
+                <div class="config-box">
+                    <h3>TURNOS</h3>
+                    <div class="form-row">
+                        <label>Inicio de turnos:</label>
+                        <select><option>8:00 AM</option></select>
+                    </div>
+                    <div class="form-row">
+                        <label>Fin de turnos:</label>
+                        <select><option>5:00 PM</option></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="config-users-row">
+                <span>USUARIOS DEL SISTEMA:</span>
+                <button class="btn-gray">Gestionar Usuarios 👥</button>
+            </div>
+
+            <div class="save-container">
+                <button class="btn-save">Guardar</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

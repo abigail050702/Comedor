@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Menú Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard" class="active">🏠 Dashboard</a>
+                <a href="/alumnos">👥 Alumnos</a>
+                <a href="/platillos">🍲 Platillos</a>
+                <a href="/turnos">📅 Turnos</a>
+                <a href="/reportes">📄 Reportes</a>
+                <a href="/configuracion">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>SISTEMA DE CONTROL DE COMEDOR (SCC)</h1>
+            
+            <div class="cards-row">
+                <div class="card">
+                    <h3>ALUMNOS ATENDIDOS</h3>
+                    <p class="number">{{ stats.atendidos }}</p>
+                </div>
+                <div class="card">
+                    <h3>PLATILLOS PREPARADOS</h3>
+                    <p class="number">{{ stats.preparados }}</p>
+                </div>
+                <div class="card">
+                    <h3>PLATILLOS RESTANTES</h3>
+                    <p class="number">{{ stats.restantes }}</p>
+                </div>
+            </div>
+
+            <div class="dashboard-bottom">
+                <div class="section-box">
+                    <h3>ALUMNOS ATENDIDOS POR TURNO</h3>
+                    <div class="chart-mock">
+                        <div class="bar-container">
+                            <span>TURNO MATUTINO</span>
+                            <div class="bar red" style="width: 70%;"></div>
+                        </div>
+                        <div class="bar-container">
+                            <span>TURNO VESPERTINO</span>
+                            <div class="bar red" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-box">
+                    <h3>REGISTRO DE ENTRADA RÁPIDA</h3>
+                    <form>
+                        <input type="text" placeholder="Matrícula alumno" class="input-field">
+                        <button type="button" class="btn-primary">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

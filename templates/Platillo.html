@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Platillos - SCC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">🍽️ SCC</div>
+            <nav>
+                <a href="/dashboard">🏠 Dashboard</a>
+                <a href="/alumnos">👥 Alumnos</a>
+                <a href="/platillos" class="active">🍲 Platillos</a>
+                <a href="/turnos">📅 Turnos</a>
+                <a href="/reportes">📄 Reportes</a>
+                <a href="/configuracion">⚙️ Configuración</a>
+            </nav>
+            <a href="/" class="logout">🚪 Cerrar sesión</a>
+        </aside>
+
+        <main class="content">
+            <div class="top-stats-row">
+                <div class="mini-card">No. Platillos Servidos: <b>0</b></div>
+                <div class="mini-card">Salidas: <b>0</b></div>
+            </div>
+
+            <button class="btn-green">+ Ingresar Comida</button>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>TURNO</th>
+                        <th>FECHA</th>
+                        <th>NOMBRE DEL PLATO</th>
+                        <th>DESCRIPCIÓN DEL PLATO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in platillos %}
+                    <tr>
+                        <td>{{ p.turno }}</td>
+                        <td>{{ p.fecha }}</td>
+                        <td>{{ p.nombre }}</td>
+                        <td>{{ p.descripcion }}</td>
+                        <td><button class="btn-icon">✏️</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

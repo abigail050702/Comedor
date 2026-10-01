@@ -1,0 +1,327 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menú Lateral */
+.sidebar {
+    width: 220px;
+    background-color: #8da99a; /* Tono verde agua de tus capturas */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar-logo {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.sidebar nav a.active, .sidebar nav a:hover {
+    color: #4b2e83; /* Tono morado de selección */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Contenido Principal */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Fondo verde unificado para el Login */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #8da99a; /* Mismo color verde de la barra lateral */
+    font-family: Arial, sans-serif;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 380px;
+}
+
+.login-card h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.logo-placeholder {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+}
+
+.input-group span {
+    margin-right: 10px;
+    color: #666;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.btn-login {
+    background-color: #d0ded1; /* Un tono sutil que combina con la paleta */
+    border: 1px solid #b5c7b7;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background-color: #bcd0be;
+}
+
+/* Tarjetas del Dashboard y Turnos */
+.cards-row, .top-stats-row, .top-stats-row-4 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.card, .card-metric, .mini-card {
+    flex: 1;
+    background-color: #789c93;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card .number {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.dashboard-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.section-box {
+    flex: 1;
+    background: #e8edeb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Tablas */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f4f1ea; /* Tono beige clásico de tus capturas */
+    margin-top: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #dcd6cd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.styled-table th {
+    background-color: #eae5dc;
+}
+
+/* Filtros y Botones extra */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-bar select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.btn-green {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #155724;
+}
+
+.btn-pdf {
+    background-color: transparent;
+    border: none;
+    color: #004085;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+/* Configuración y Turnos Layout */
+.config-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.config-box {
+    flex: 1;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-row select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+.config-users-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-gray {
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.turnos-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.left-turnos {
+    flex: 2;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-detalle {
+    flex: 1.5;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.badge-confirm {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.turno-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+.date-box {
+    background: #e2e8f0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+}
